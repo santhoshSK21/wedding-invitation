@@ -5,8 +5,8 @@ const contacts = [
   {
     role: 'Groom',
     name: 'Sarathkumar',
-    phone: '+91 95859 89600',
-    whatsapp: '919585989600',
+    phone: '+91 87546 55313',
+    whatsapp: '918754655313',
     icon: '🤵',
   },
   {

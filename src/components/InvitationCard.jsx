@@ -1,9 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { QRCodeSVG } from 'qrcode.react'
 import './InvitationCard.css'
-
-const LOCATION_URL = 'https://maps.google.com/?q=Sri+Annamalaiyar+Thirumana+Mahal,Sri+Gopalapuram+VK+Mills,Chinna+kalayamuthur,Palani,Tamil+Nadu+624615'
 
 export default function InvitationCard() {
   const ref = useRef(null)
@@ -25,6 +22,27 @@ export default function InvitationCard() {
       >
         <div className="inv-border">
           <div className="inv-body">
+
+            {/* ── Poetic quote ── */}
+            <motion.div className="inv-quote-block"
+              initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }} transition={{ duration: 0.8 }}
+            >
+              <p className="inv-quote-text">
+                Every love story is beautiful,<br />
+                <em>but ours is our favorite.</em>
+              </p>
+              <p className="inv-quote-sub">
+                With the blessings of those we hold dear,<br />
+                we begin a new chapter together and invite you<br />
+                to be part of this unforgettable moment.
+              </p>
+              <p className="inv-quote-foot">
+                Come celebrate love, laughter, and a bond meant forever.
+              </p>
+            </motion.div>
+
+            <div className="inv-ornament">— ✦ —</div>
 
             {/* ── Header ── */}
             <p className="inv-preamble">With the blessings of God &amp; our beloved parents</p>
@@ -105,32 +123,6 @@ export default function InvitationCard() {
               <span className="mono-heart">♥</span>
               <span>K</span>
             </div>
-
-            <div className="inv-section-divider" aria-hidden>❧ ✦ ❧</div>
-
-            {/* ── QR Code — end of card ── */}
-            <motion.div
-              className="inv-qr-section"
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-            >
-              <p className="inv-qr-label">📍 Scan to find the venue</p>
-              <a href={LOCATION_URL} target="_blank" rel="noopener noreferrer" className="inv-qr-link">
-                <div className="inv-qr-frame">
-                  <QRCodeSVG
-                    value={LOCATION_URL}
-                    size={130}
-                    bgColor="#ffffff"
-                    fgColor="#4C1D95"
-                    level="H"
-                    imageSettings={{ src: '', excavate: false }}
-                  />
-                </div>
-              </a>
-              <p className="inv-qr-sub">Sri Annamalaiyar Thirumana Mahal · Palani 624615</p>
-            </motion.div>
 
           </div>
         </div>

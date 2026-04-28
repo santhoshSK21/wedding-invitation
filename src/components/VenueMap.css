@@ -1,0 +1,154 @@
+﻿/* ══════════════════════════════════════
+   VenueMap — Location & QR Section
+══════════════════════════════════════ */
+.vm-section {
+  padding: 6rem 2rem;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(124,58,237,.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 50%, rgba(167,139,250,.06) 0%, transparent 55%),
+    var(--bg, #FAF7FF);
+}
+
+.vm-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Header */
+.vm-eyebrow {
+  font-family: "Lato", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #7C3AED;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+.vm-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  color: #1E0A3C;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.vm-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 3rem;
+}
+.vm-line {
+  width: 80px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(124,58,237,.35), transparent);
+}
+.vm-diamond { font-size: 0.5rem; color: #7C3AED; opacity: 0.6; }
+
+/* Content row */
+.vm-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Venue info */
+.vm-info {
+  flex: 1 1 340px;
+  text-align: left;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(124,58,237,0.15);
+  border-radius: 4px;
+  padding: 2rem 2rem 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 24px rgba(124,58,237,0.07);
+}
+.vm-info-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+.vm-venue-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: #1E0A3C;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+.vm-venue-addr {
+  font-family: "Lato", sans-serif;
+  font-size: 0.85rem;
+  color: rgba(30,10,60,0.6);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+.vm-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 1.6rem;
+}
+.vm-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Playfair Display", serif;
+  font-size: 0.85rem;
+  color: #3B0764;
+}
+.vm-directions-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #7C3AED, #5B21B6);
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.75rem 1.8rem;
+  border-radius: 2px;
+  box-shadow: 0 4px 18px rgba(124,58,237,0.3);
+  transition: box-shadow 0.25s;
+}
+.vm-directions-btn:hover { box-shadow: 0 8px 28px rgba(124,58,237,0.45); }
+
+/* QR */
+.vm-qr {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+.vm-qr-label {
+  font-family: "Lato", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7C3AED;
+  opacity: 0.8;
+}
+.vm-qr-link { display: block; text-decoration: none; }
+.vm-qr-frame {
+  padding: 14px;
+  border-radius: 12px;
+  background: #fff;
+  border: 2px solid rgba(124,58,237,0.22);
+  box-shadow: 0 4px 20px rgba(76,29,149,0.12), 0 1px 4px rgba(124,58,237,0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.vm-qr-link:hover .vm-qr-frame {
+  transform: scale(1.04);
+  box-shadow: 0 8px 32px rgba(76,29,149,0.24);
+}
+.vm-qr-sub {
+  font-family: "Lato", sans-serif;
+  font-size: 0.7rem;
+  color: rgba(76,29,149,0.55);
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 600px) {
+  .vm-info { text-align: center; }
+  .vm-details { align-items: center; }
+}

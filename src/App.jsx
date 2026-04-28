@@ -7,6 +7,7 @@ import PhotoGallery3D from './components/PhotoGallery3D'
 import Countdown from './components/Countdown'
 import Timeline from './components/Timeline'
 import ContactSection from './components/ContactSection'
+import VenueMap from './components/VenueMap'
 import MusicPlayer from './components/MusicPlayer'
 import FloatingActions from './components/FloatingActions'
 import './App.css'
@@ -42,6 +43,7 @@ function App() {
           <PhotoGallery3D />
           <Countdown />
           <Timeline />
+          <VenueMap />
           <ContactSection />
           <footer className="wedding-footer">
             <p>With love, Sarathkumar &amp; Karthikasree</p>
