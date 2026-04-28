@@ -1,0 +1,276 @@
+/* ═══════════════════════════════════════════════════
+   PhotoGallery3D — Violet / Cream Theme
+═══════════════════════════════════════════════════ */
+
+/* Section ---------------------------------------- */
+.pg3d-section {
+  position: relative;
+  padding: 6rem 2rem 7rem;
+  background: linear-gradient(180deg, #FAF7FF 0%, #EDE9FE 55%, #FAF7FF 100%);
+  overflow: hidden;
+}
+
+/* decorative ambient orbs */
+.pg3d-bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.35;
+}
+.pg3d-orb1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #C4B5FD, transparent 70%);
+  top: -120px;
+  left: -120px;
+}
+.pg3d-orb2 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, #A78BFA, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+}
+
+/* Header ----------------------------------------- */
+.pg3d-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.pg3d-eyebrow {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #7C3AED;
+  font-size: 0.78rem;
+  margin-bottom: 0.75rem;
+}
+.pg3d-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #1E0A3C;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.pg3d-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+.pg3d-line {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #A78BFA, transparent);
+}
+.pg3d-diamond {
+  color: #A78BFA;
+  font-size: 0.7rem;
+}
+.pg3d-subtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.88rem;
+  color: #7C3AED;
+  opacity: 0.7;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+/* Grid ------------------------------------------- */
+.pg3d-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 940px;
+  margin: 0 auto;
+  perspective: 1400px;
+}
+
+@media (max-width: 860px) {
+  .pg3d-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+  }
+}
+@media (max-width: 520px) {
+  .pg3d-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+}
+
+/* Wrapper (handles whileInView) ------------------ */
+.pg3d-wrapper {
+  perspective: 1200px;
+}
+
+/* Tilt layer ------------------------------------- */
+.pg3d-tilt {
+  position: relative;
+  cursor: pointer;
+  will-change: transform;
+}
+
+/* Frame (the visible card face) ------------------ */
+.pg3d-frame {
+  position: relative;
+  border-radius: 22px;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 1.5px solid rgba(196, 181, 253, 0.45);
+  box-shadow:
+    0 8px 32px rgba(76, 29, 149, 0.22),
+    0 2px 8px rgba(76, 29, 149, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  transform-style: preserve-3d;
+  transition: box-shadow 0.35s ease;
+}
+.pg3d-tilt:hover .pg3d-frame {
+  box-shadow:
+    0 18px 55px rgba(76, 29, 149, 0.38),
+    0 4px 16px rgba(124, 58, 237, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* Shine sweep ------------------------------------ */
+.pg3d-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.0) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+.pg3d-shine--active {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.0) 55%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+}
+
+/* Content (floats forward with translateZ) ------- */
+.pg3d-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: 3;
+  transform: translateZ(40px);
+  padding: 1rem;
+}
+
+.pg3d-icon {
+  font-size: 3.8rem;
+  display: block;
+  filter: drop-shadow(0 4px 14px rgba(255, 255, 255, 0.7));
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.pg3d-label {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.9rem;
+  color: #fff;
+  text-shadow: 0 2px 14px rgba(76, 29, 149, 0.55);
+  line-height: 1.1;
+}
+.pg3d-sub {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 0 1px 6px rgba(76, 29, 149, 0.4);
+}
+.pg3d-badge {
+  margin-top: 0.8rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Corner flourishes ------------------------------ */
+.pg3d-corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-style: solid;
+  z-index: 4;
+  pointer-events: none;
+  transition: border-color 0.3s;
+}
+.pg3d-tilt:hover .pg3d-corner {
+  border-color: rgba(255, 255, 255, 0.85);
+}
+.pg3d-tl { top: 12px;    left: 12px;  border-width: 2px 0 0 2px; border-radius: 5px 0 0 0; }
+.pg3d-tr { top: 12px;    right: 12px; border-width: 2px 2px 0 0; border-radius: 0 5px 0 0; }
+.pg3d-bl { bottom: 12px; left: 12px;  border-width: 0 0 2px 2px; border-radius: 0 0 0 5px; }
+.pg3d-br { bottom: 12px; right: 12px; border-width: 0 2px 2px 0; border-radius: 0 0 5px 0; }
+
+/* Outer glow ring -------------------------------- */
+.pg3d-glow {
+  position: absolute;
+  inset: -3px;
+  border-radius: 24px;
+  box-shadow:
+    0 0 24px 6px rgba(167, 139, 250, 0.55),
+    0 0 60px 18px rgba(124, 58, 237, 0.22);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 3D depth edges (thin slivers on bottom/right) -- */
+.pg3d-edge-bottom {
+  position: absolute;
+  bottom: -8px;
+  left: 10px;
+  right: 10px;
+  height: 10px;
+  background: linear-gradient(180deg, rgba(76, 29, 149, 0.45), rgba(76, 29, 149, 0.0));
+  border-radius: 0 0 18px 18px;
+  filter: blur(3px);
+  transform: rotateX(90deg) translateZ(-4px);
+}
+.pg3d-edge-right {
+  position: absolute;
+  top: 10px;
+  right: -8px;
+  bottom: 10px;
+  width: 10px;
+  background: linear-gradient(90deg, rgba(76, 29, 149, 0.35), rgba(76, 29, 149, 0.0));
+  border-radius: 0 18px 18px 0;
+  filter: blur(3px);
+  transform: rotateY(90deg) translateZ(-4px);
+}
+
+/* Drop shadow under card ------------------------- */
+.pg3d-shadow {
+  margin: 0 10%;
+  height: 28px;
+  margin-top: 4px;
+  background: radial-gradient(ellipse, rgba(76, 29, 149, 0.2) 0%, transparent 75%);
+  filter: blur(8px);
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+.pg3d-shadow--hover {
+  background: radial-gradient(ellipse, rgba(76, 29, 149, 0.38) 0%, transparent 72%);
+  height: 35px;
+  filter: blur(12px);
+  margin: 0 5%;
+  margin-top: 8px;
+}

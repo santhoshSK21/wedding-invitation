@@ -1,0 +1,15 @@
+﻿.wedding-footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #4C1D95, #7C3AED);
+  border-top: 2px solid #A78BFA;
+  color: rgba(255,255,255,0.88);
+  font-family: "Playfair Display", serif;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+.wedding-footer p + p {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  opacity: 0.65;
+}

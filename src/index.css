@@ -1,0 +1,43 @@
+﻿/* ── CSS custom properties (light default) ──────── */
+:root {
+  --bg:         #FAF7FF;
+  --bg2:        #EDE9FE;
+  --text:       #1E0A3C;
+  --text-soft:  #5B21B6;
+  --surface:    #ffffff;
+  --surface2:   #F5F0FF;
+  --border:     rgba(124,58,237,.22);
+  --violet:     #7C3AED;
+  --violet-mid: #A78BFA;
+  --violet-lt:  #C4B5FD;
+  --scrollbar-bg: #EDE9FE;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+  --bg:         #0F0720;
+  --bg2:        #1A0A35;
+  --text:       #EDE9FE;
+  --text-soft:  #C4B5FD;
+  --surface:    #1E0A3C;
+  --surface2:   #2D1260;
+  --border:     rgba(196,181,253,.18);
+  --violet:     #A78BFA;
+  --violet-mid: #7C3AED;
+  --violet-lt:  #5B21B6;
+  --scrollbar-bg: #1A0A35;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+#root { max-width: 100%; width: 100%; margin: 0; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-bg); }
+::-webkit-scrollbar-thumb { background: var(--violet); border-radius: 3px; }

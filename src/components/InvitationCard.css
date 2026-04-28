@@ -1,0 +1,205 @@
+.inv-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem 2rem;
+  background:
+    radial-gradient(ellipse at 18% 50%, rgba(124,58,237,.1) 0%, transparent 55%),
+    radial-gradient(ellipse at 82% 50%, rgba(167,139,250,.08) 0%, transparent 55%),
+    #FAF7FF;
+  overflow: hidden;
+}
+
+/* Corner flourishes */
+.flourish {
+  position: absolute;
+  font-size: 2.6rem;
+  color: rgba(124,58,237,.15);
+  font-family: Georgia, serif;
+  user-select: none;
+}
+.fl-tl { top: 2rem;    left: 2.5rem;  transform: rotate(-45deg); }
+.fl-tr { top: 2rem;    right: 2.5rem; transform: rotate(45deg); }
+.fl-bl { bottom: 2rem; left: 2.5rem;  transform: rotate(-135deg); }
+.fl-br { bottom: 2rem; right: 2.5rem; transform: rotate(135deg); }
+
+/* Card */
+.inv-card {
+  max-width: 740px;
+  width: 100%;
+  perspective: 1200px;
+}
+
+.inv-border {
+  padding: 3px;
+  background: linear-gradient(135deg, #7C3AED, #A78BFA, #C4B5FD, #7C3AED);
+  box-shadow:
+    0 35px 90px rgba(124,58,237,.14),
+    0 0 0 10px rgba(124,58,237,.04),
+    0 0 0 20px rgba(167,139,250,.025);
+}
+
+.inv-body {
+  background: linear-gradient(160deg, #fff 0%, #FAF7FF 55%, #F5F0FF 100%);
+  padding: 4.5rem 3.5rem;
+  text-align: center;
+}
+
+.inv-preamble {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: rgba(124,58,237,.72);
+  font-size: .9rem;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.inv-names {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  color: #1E0A3C;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.inv-amp {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.56em;
+  color: #7C3AED;
+}
+
+.inv-ornament {
+  color: #7C3AED;
+  font-size: 1.15rem;
+  letter-spacing: 9px;
+  margin: 2rem 0;
+}
+
+.inv-verse {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: rgba(30,10,60,.65);
+  font-size: 1.08rem;
+  line-height: 2;
+  margin-bottom: 3rem;
+}
+
+/* Details grid */
+.inv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem 2rem;
+  padding: 2.2rem;
+  border: 1px solid rgba(124,58,237,.18);
+  background: rgba(124,58,237,.03);
+  margin-bottom: 2.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  text-align: left;
+}
+
+.detail-icon { font-size: 1.45rem; margin-top: .1rem; }
+
+.detail-label {
+  font-family: 'Lato', sans-serif;
+  font-size: .68rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #7C3AED;
+  margin-bottom: .28rem;
+}
+
+.detail-value {
+  font-family: 'Playfair Display', serif;
+  color: #1E0A3C;
+  font-size: .95rem;
+  line-height: 1.45;
+}
+
+/* Note */
+.inv-note {
+  border-top: 1px solid rgba(124,58,237,.15);
+  padding-top: 1.6rem;
+  font-family: 'Lato', sans-serif;
+  font-size: .83rem;
+  color: rgba(30,10,60,.5);
+  line-height: 2;
+  letter-spacing: .8px;
+}
+
+/* QR Code */
+.inv-qr-section {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+}
+.inv-qr-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7C3AED;
+}
+.inv-qr-link {
+  display: block;
+  text-decoration: none;
+}
+.inv-qr-frame {
+  padding: 12px;
+  border-radius: 16px;
+  background: #fff;
+  border: 2px solid rgba(124, 58, 237, 0.22);
+  box-shadow:
+    0 4px 20px rgba(76, 29, 149, 0.14),
+    0 1px 4px rgba(124, 58, 237, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.inv-qr-link:hover .inv-qr-frame {
+  transform: scale(1.04);
+  box-shadow:
+    0 8px 32px rgba(76, 29, 149, 0.28),
+    0 2px 8px rgba(124, 58, 237, 0.18);
+}
+.inv-qr-sub {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem;
+  color: rgba(76, 29, 149, 0.6);
+  letter-spacing: 1.5px;
+}
+
+/* Monogram */
+.inv-monogram {
+  margin-top: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.2rem;
+  color: #7C3AED;
+}
+
+.mono-heart {
+  font-size: 1.5rem;
+  color: #FF6B9D;
+  animation: heartPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.22); }
+}
+
+@media (max-width: 600px) {
+  .inv-body  { padding: 2.8rem 1.6rem; }
+  .inv-grid  { grid-template-columns: 1fr; }
+}

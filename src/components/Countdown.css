@@ -1,0 +1,122 @@
+.cd-section {
+  position: relative;
+  padding: 8rem 2rem;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(180deg, #FAF7FF 0%, #EDE9FE 100%);
+}
+
+/* pulsing rings */
+.cd-rings {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.cd-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(124,58,237,.1);
+  width:  calc(180px + var(--i) * 130px);
+  height: calc(180px + var(--i) * 130px);
+  animation: ringPulse calc(4s + var(--i) * 1.1s) ease-in-out infinite;
+}
+
+@keyframes ringPulse {
+  0%, 100% { transform: scale(1);    opacity: .5; }
+  50%       { transform: scale(1.06); opacity: 1;  }
+}
+
+.cd-inner { position: relative; z-index: 1; }
+
+.cd-eyebrow {
+  font-family: 'Lato', sans-serif;
+  font-size: .78rem;
+  letter-spacing: 4.5px;
+  text-transform: uppercase;
+  color: #7C3AED;
+  margin-bottom: .9rem;
+}
+
+.cd-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  color: #1E0A3C;
+  font-weight: 400;
+  margin-bottom: .4rem;
+}
+
+.cd-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: rgba(124,58,237,.65);
+  font-size: .98rem;
+  letter-spacing: 2px;
+  margin-bottom: 4rem;
+}
+
+/* grid */
+.cd-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cd-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
+}
+
+.cd-digits { display: flex; gap: 5px; }
+
+.cd-digit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 94px;
+  background: linear-gradient(160deg, #fff 0%, #F5F0FF 100%);
+  border: 1.5px solid rgba(124,58,237,.3);
+  border-radius: 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #5B21B6;
+  box-shadow: 0 6px 24px rgba(124,58,237,.12), inset 0 1px 0 rgba(255,255,255,.95);
+  position: relative;
+}
+
+/* middle split line */
+.cd-digit::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  height: 1px;
+  background: rgba(124,58,237,.15);
+}
+
+.cd-label {
+  font-family: 'Lato', sans-serif;
+  font-size: .68rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(124,58,237,.7);
+}
+
+.cd-sep {
+  font-size: 3rem;
+  color: rgba(124,58,237,.4);
+  margin-top: -2rem;
+}
+
+@media (max-width: 500px) {
+  .cd-digit { width: 52px; height: 70px; font-size: 2rem; }
+}
