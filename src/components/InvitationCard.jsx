@@ -86,9 +86,9 @@ export default function InvitationCard() {
               <div className="inv-event-details">
                 <span className="inv-event-detail"><span className="inv-event-icon">📅</span> Tuesday, June 23, 2026</span>
                 <span className="inv-event-sep">·</span>
-                <span className="inv-event-detail"><span className="inv-event-icon">🕕</span> Reception: 6:00 PM onwards</span>
+                <span className="inv-event-detail"><span className="inv-event-icon">🕕</span> Reception: 6:30 PM onwards</span>
                 <span className="inv-event-sep">·</span>
-                <span className="inv-event-detail"><span className="inv-event-icon">💍</span> Engagement: 9:30 PM</span>
+                <span className="inv-event-detail"><span className="inv-event-icon">💍</span> Engagement: 9:00 PM</span>
               </div>
             </motion.div>
 

@@ -6,13 +6,13 @@ const days = [
     date: 'Tuesday, June 23 · 2026',
     events: [
       {
-        time: '6:00 PM – 9:30 PM',
+        time: '6:30 PM – 9:00 PM',
         icon: '🍽️',
         title: 'Wedding Reception',
         desc: 'A joyful evening of dinner, laughter, and blessings with family and friends',
       },
       {
-        time: '9:30 PM – 10:30 PM',
+        time: '9:00 PM – 10:30 PM',
         icon: '💍',
         title: 'Engagement Ceremony',
         desc: 'Exchange of rings and the sacred promise that begins forever',
