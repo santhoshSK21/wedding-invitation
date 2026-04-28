@@ -89,12 +89,12 @@ export default function Envelope({ onOpen }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.75, duration: 1.0 }}
         >
-          <h1 className="el-name">Karthikasree</h1>
+          <h1 className="el-name">Sarathkumar</h1>
           <motion.span className="el-amp"
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 3, repeat: Infinity }}
           >&amp;</motion.span>
-          <h1 className="el-name">Sarathkumar</h1>
+          <h1 className="el-name">Karthikasree</h1>
         </motion.div>
 
         {/* Divider */}

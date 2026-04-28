@@ -44,8 +44,7 @@ function App() {
           <Timeline />
           <ContactSection />
           <footer className="wedding-footer">
-            <p>With love, Karthikasree &amp; Sarathkumar</p>
-            <p>© 2026. Designed with care by santhoshkumar.</p>
+            <p>With love, Sarathkumar &amp; Karthikasree</p>
           </footer>
 
           {/* Floating UI */}

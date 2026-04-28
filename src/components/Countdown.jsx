@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import './Countdown.css'
 
-const WEDDING_DATE = new Date('2026-06-24T16:00:00')
+const WEDDING_DATE = new Date('2026-06-24T06:00:00')
 
 function useCountdown(target) {
   const [t, setT] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
@@ -66,7 +66,7 @@ export default function Countdown() {
       >
         <p className="cd-eyebrow">Counting down to</p>
         <h2 className="cd-title">Our Special Day</h2>
-        <p className="cd-subtitle">June 24, 2026 &mdash; 4 : 00 PM</p>
+        <p className="cd-subtitle">June 24, 2026 &mdash; 6 : 00 AM</p>
 
         <div className="cd-grid">
           <Block value={days}    label="Days"    delay={0}    />

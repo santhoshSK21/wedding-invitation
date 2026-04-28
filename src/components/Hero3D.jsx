@@ -186,9 +186,9 @@ export default function Hero3D() {
           <p className="hero-eyebrow">Together with their families</p>
 
           <h1 className="hero-names">
-            <span className="hero-name">Karthikasree</span>
-            <span className="hero-amp">&amp;</span>
             <span className="hero-name">Sarathkumar</span>
+            <span className="hero-amp">&amp;</span>
+            <span className="hero-name">Karthikasree</span>
           </h1>
 
           <div className="hero-divider">

@@ -5,36 +5,22 @@ const contacts = [
   {
     role: 'Groom',
     name: 'Sarathkumar',
-    phone: '+91 98765 43210',
-    whatsapp: '919876543210',
+    phone: '+91 95859 89600',
+    whatsapp: '919585989600',
     icon: '🤵',
   },
   {
     role: 'Bride',
     name: 'Karthikasree',
-    phone: '+91 98765 43211',
-    whatsapp: '919876543211',
+    phone: '+91 95859 89600',
+    whatsapp: '919585989600',
     icon: '👰',
-  },
-  {
-    role: "Groom's Father",
-    name: 'Mr. Annamalai',
-    phone: '+91 98765 43212',
-    whatsapp: '919876543212',
-    icon: '👨',
-  },
-  {
-    role: "Bride's Father",
-    name: 'Mr. Murugan',
-    phone: '+91 98765 43213',
-    whatsapp: '919876543213',
-    icon: '👨',
-  },
+  }
 ]
 
 function ContactCard({ contact, index }) {
   const waMsg = encodeURIComponent(
-    `Hello ${contact.name}! I'm reaching out regarding the wedding of Karthikasree & Sarathkumar on June 23–24, 2026.`
+    `Hello ${contact.name}! I'm reaching out regarding the wedding of Sarathkumar & Karthikasree on June 23–24, 2026.`
   )
   return (
     <motion.div

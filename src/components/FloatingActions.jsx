@@ -8,11 +8,11 @@ function downloadICS() {
   const ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Karthikasree & Sarathkumar Wedding//EN',
+    'PRODID:-//Sarathkumar & Karthikasree Wedding//EN',
     'BEGIN:VEVENT',
     'DTSTART:20260623T120000Z',
     'DTEND:20260624T020000Z',
-    'SUMMARY:Karthikasree & Sarathkumar Wedding',
+    'SUMMARY:Sarathkumar & Karthikasree Wedding',
     'DESCRIPTION:Wedding Reception (Jun 23, 6PM) • Engagement (Jun 23, 9:30PM) • Muhurtham (Jun 24, 6AM)',
     'LOCATION:Sri Annamalaiyar Thirumana Mahal, Sri Gopalapuram VK Mills, Chinna Kalayamuthur, Palani, Tamil Nadu 624615',
     'END:VEVENT',
@@ -23,7 +23,7 @@ function downloadICS() {
   const url  = URL.createObjectURL(blob)
   const a    = document.createElement('a')
   a.href     = url
-  a.download = 'karthikasree-sarathkumar-wedding.ics'
+  a.download = 'sarathkumar-karthikasree-wedding.ics'
   a.click()
   URL.revokeObjectURL(url)
 }
@@ -32,7 +32,7 @@ function downloadICS() {
 function shareWhatsApp() {
   const text = encodeURIComponent(
     '💍 *You\'re Invited!*\n\n' +
-    '🌸 *Karthikasree & Sarathkumar*\n\n' +
+    '🌸 *Sarathkumar & Karthikasree*\n\n' +
     '📅 *Reception:* June 23, 2026 · 6:00 PM\n' +
     '💍 *Engagement:* June 23, 2026 · 9:30 PM\n' +
     '🌸 *Muhurtham:* June 24, 2026 · 6:00 AM\n\n' +
