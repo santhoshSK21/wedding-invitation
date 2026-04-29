@@ -37,7 +37,7 @@
   font-family: 'Playfair Display', serif;
   font-style: italic;
   color: #EDE9FE;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   letter-spacing: 3.5px;
   text-transform: uppercase;
   margin-bottom: 1.2rem;
@@ -55,7 +55,7 @@
 .hero-name {
   font-family: 'Great Vibes', cursive;
   font-size: clamp(3.2rem, 8vw, 6.5rem);
-  color: #fff;
+  color: #ffffff;
   text-shadow:
     0 0 28px rgba(196,181,253,0.9),
     0 0 60px rgba(124,58,237,0.6),
@@ -95,7 +95,7 @@
   font-family: 'Playfair Display', serif;
   font-style: italic;
   color: rgba(237,233,254,0.9);
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   letter-spacing: 1px;
   line-height: 2.1;
 }

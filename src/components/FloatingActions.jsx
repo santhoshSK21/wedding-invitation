@@ -45,7 +45,7 @@ function shareWhatsApp() {
 /* ── Invite QR modal ─────────────────────────────────────── */
 const INVITE_URL = typeof window !== 'undefined' ? window.location.href : 'https://wedding-invite.app'
 
-export default function FloatingActions({ darkMode, onToggleDark }) {
+export default function FloatingActions() {
   const [open, setOpen]      = useState(false)
   const [qrOpen, setQrOpen]  = useState(false)
   const [saved, setSaved]    = useState(false)
@@ -65,7 +65,7 @@ export default function FloatingActions({ darkMode, onToggleDark }) {
   }
 
   const actions = [
-    { label: 'Dark / Light', icon: darkMode ? '☀️' : '🌙', onClick: onToggleDark },
+    
     { label: 'WhatsApp Share', icon: '💬', onClick: shareWhatsApp },
     { label: saved ? 'Saved! ✓' : 'Save the Date', icon: '📅', onClick: handleSave },
     { label: 'QR Invite', icon: '🔗', onClick: () => setQrOpen(true) },

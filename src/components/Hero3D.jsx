@@ -138,7 +138,7 @@ export default function Hero3D() {
         className="hero-canvas"
         camera={{ position: [0, 0, 13], fov: 58 }}
         gl={{ antialias: true }}
-        style={{ background: 'linear-gradient(135deg, #EDE9FE, #C4B5FD, #A78BFA)' }}
+        style={{ background: 'linear-gradient(135deg, #1E0A3C, #7f38a8, #4C1D95)' }}
       >
         <Scene />
       </Canvas>
